@@ -12,9 +12,9 @@ namespace KPIs_Gerencia.Controllers
 
         public async Task<IActionResult >Registro(RegistroViewModel model)
         {
-            if(!=ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                return View(modelo);
+                return View(model);
             }
             return RedirectToAction("Index");
         }
