@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using KPIs_Gerencia.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace KPIs_Gerencia.Controllers
 {
@@ -7,6 +8,15 @@ namespace KPIs_Gerencia.Controllers
         public IActionResult Registro()
         {
             return View();
+        }
+
+        public async Task<IActionResult >Registro(RegistroViewModel model)
+        {
+            if(!=ModelState.IsValid)
+            {
+                return View(modelo);
+            }
+            return RedirectToAction("Index");
         }
     }
 }
