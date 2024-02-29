@@ -9,8 +9,8 @@ namespace KPIs_Gerencia.Controllers
         {
             return View();
         }
-
-        public async Task<IActionResult >Registro(RegistroViewModel model)
+        [HttpPost]
+        public async Task<IActionResult>Registro(RegistroViewModel model)
         {
             if (!ModelState.IsValid)
             {
