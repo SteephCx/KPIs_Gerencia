@@ -5,11 +5,31 @@
 
 <h1>Crear nueva captura</h1>
 <h5>Captura tus indicadores en forma ordenada</h5>
+<p>Numero Empleado: @ViewBag.NoEmpleado</p>
+<p>Nombre: @ViewBag.NombreEmpleado</p>
+<p>Apellido: @ViewBag.ApellidoEmpleado</p>
+<p>Departamento: @ViewBag.Departamento</p>
+
+@foreach (var entry in Model.EntryValues)
+{
+<div>
+    <label asp-for="@($"Entry_{entry.IdInd}")">@ViewData[$"Label_{entry.IdInd}"]</label>
+    <input asp-for="@($"Entry_{entry.IdInd}.Value")" />
+</div>
+}
+
+<div>
+    <label>Seleccionar Fecha KPIs:</label>
+    <input type="text" asp-for="@ViewBag.SelectedDate" />
+    <button type="button" onclick="showCalendar()">Seleccionar Fecha KPIs</button>
+</div>
+
+<button type="button" onclick="saveData()">Introducir KPI's</button>
 
 
-<from asp-controller="CapturaKPIs">
-    <div class="mb-3">
-        <label for=""></label>
+@*<from asp-controller="CapturaKPIs">
+        <div class="mb-3">
+            <label for=""></label>
 
-    </div>
-</from>
+        </div>
+    </from>*@

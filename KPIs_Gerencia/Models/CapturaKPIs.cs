@@ -9,7 +9,6 @@ namespace KPIs_Gerencia.Models
         public DateTime FECHA { get; set; }
         public int CANT { get; set; }
         public int NO_EMPLEDO { get; set; }
-
         public DateTime FECHA_IND { get; set; }
 
 
