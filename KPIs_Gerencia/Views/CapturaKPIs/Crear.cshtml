@@ -10,7 +10,22 @@
 <p>Apellido: @ViewBag.ApellidoEmpleado</p>
 <p>Departamento: @ViewBag.Departamento</p>
 
-@foreach (var entry in Model.EntryValues)
+
+<from asp-controller="CapturaKPIs">
+    <div class="mb-3">
+        <label for=""></label>
+
+    </div>
+</from>
+
+
+
+
+
+
+
+
+@*@foreach (var entry in Model.EntryValues)
 {
 <div>
     <label asp-for="@($"Entry_{entry.IdInd}")">@ViewData[$"Label_{entry.IdInd}"]</label>
@@ -24,12 +39,6 @@
     <button type="button" onclick="showCalendar()">Seleccionar Fecha KPIs</button>
 </div>
 
-<button type="button" onclick="saveData()">Introducir KPI's</button>
+<button type="button" onclick="saveData()">Introducir KPI's</button>*@
 
 
-@*<from asp-controller="CapturaKPIs">
-        <div class="mb-3">
-            <label for=""></label>
-
-        </div>
-    </from>*@
