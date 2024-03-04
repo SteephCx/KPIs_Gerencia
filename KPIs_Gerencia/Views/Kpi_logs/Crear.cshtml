@@ -16,13 +16,13 @@
 <from asp-controller="CapturaKPIs">
     <div class="mb-3">
         <label for="KPI 1">KPI 1 </label>
-        <input for="" />
+        <input type="number" id="KPI 1" class="form-control" />
 
-        <label for="KPI 2">KPI 1 </label>
-        <input for="" />
+        <label for="KPI 2">KPI 2 </label>
+        <input type="number" id="KPI 2" class="form-control" />
 
-        <label for="KPI 3">KPI 1 </label>
-        <input for="" />
+        <label for="KPI 3">KPI 3 </label>
+        <input type="number" id="KPI 3" class="form-control" />
 
 
         <button>ingresar</button>
@@ -38,19 +38,17 @@
 
 
 @*@foreach (var entry in Model.EntryValues)
-{
-<div>
-    <label asp-for="@($"Entry_{entry.IdInd}")">@ViewData[$"Label_{entry.IdInd}"]</label>
-    <input asp-for="@($"Entry_{entry.IdInd}.Value")" />
-</div>
-}
+    {
+    <div>
+        <label asp-for="@($"Entry_{entry.IdInd}")">@ViewData[$"Label_{entry.IdInd}"]</label>
+        <input asp-for="@($"Entry_{entry.IdInd}.Value")" />
+    </div>
+    }
 
-<div>
-    <label>Seleccionar Fecha KPIs:</label>
-    <input type="text" asp-for="@ViewBag.SelectedDate" />
-    <button type="button" onclick="showCalendar()">Seleccionar Fecha KPIs</button>
-</div>
+    <div>
+        <label>Seleccionar Fecha KPIs:</label>
+        <input type="text" asp-for="@ViewBag.SelectedDate" />
+        <button type="button" onclick="showCalendar()">Seleccionar Fecha KPIs</button>
+    </div>
 
-<button type="button" onclick="saveData()">Introducir KPI's</button>*@
-
-
+    <button type="button" onclick="saveData()">Introducir KPI's</button>*@
