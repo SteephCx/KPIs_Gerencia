@@ -18,7 +18,7 @@ namespace KPIs_Gerencia.Models
         public int CANT { get; set; }
         ForeignKeyAttribute NO_EMPLEDO { get; set; }
         public DateTime FECHA_IND { get; set; }
-
+        //fecha el la que el indicador fue hecho 
 
 
     }

@@ -1,3 +1,6 @@
+using KPIs_Gerencia.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -13,6 +16,12 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+// lo puse por la conexion de las bases de datos 
+/* builder.Services.AddDbContext<ConexionKpis>(
+    options =>
+    {
+        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+    });*/
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
