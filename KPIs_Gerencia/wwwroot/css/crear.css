@@ -1,0 +1,15 @@
+﻿.centrar-en-pantalla {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.titulos {
+    margin-bottom: 15px; /* Ajusta el valor según la separación que desees */
+}
+
+
+.formulario {
+    margin-top: 50px;
+}

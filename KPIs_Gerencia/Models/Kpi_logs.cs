@@ -16,7 +16,10 @@ namespace KPIs_Gerencia.Models
         public DateTime FECHA { get; set; }
         [Required]
         public int CANT { get; set; }
-        ForeignKeyAttribute NO_EMPLEDO { get; set; }
+        [Required(ErrorMessage = "El número de empleado es obligatorio.")]
+        [RegularExpression("^[0-9]*$", ErrorMessage = "Ingrese solo números.")]
+        [Range(1, int.MaxValue, ErrorMessage = "El número de empleado debe ser mayor que cero.")]
+        ForeignKeyAttribute NO_EMPLEADO { get; set; }
         public DateTime FECHA_IND { get; set; }
         //fecha el la que el indicador fue hecho 
 

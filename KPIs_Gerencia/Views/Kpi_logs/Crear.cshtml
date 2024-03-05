@@ -4,18 +4,63 @@
 @{
     ViewData["Title"] = "Crear Captura de KPIs";
 }
+<link rel="stylesheet" href="~/css/crear.css">
+<div class="centrar-en-pantalla">
+ <div class="container text-center">
+    <h1 class="titulos">CAPTURA DE KPIs</h1>
+    <h5 class="titulos">Capture su número de empleado</h5>
 
-<h1>Crear nueva captura</h1>
-<h5>Captura tus indicadores en forma ordenada</h5>
-<p>Numero Empleado: @ViewBag.NoEmpleado</p>
-<p>Nombre: @ViewBag.NombreEmpleado</p>
-<p>Apellido: @ViewBag.ApellidoEmpleado</p>
-<p>Departamento: @ViewBag.Departamento</p>
+    <form method="get" asp-controller="Kpi_logs" asp-action="ConsultarNoempleado" class="formulario row g-3 justify-content-center">
+    <div class="col-auto">
+        <label for="NO_EMPLEADO" class="visually-hidden">Número de empleado</label>
+        <input type="text" readonly class="form-control-plaintext" id="NO_EMPLEADO" value="Número de empleado">
+    </div>
+    <div class="col-auto">
+        <label for="NO_EMPLEADO" class="visually-hidden">No empleado</label>
+        <input type="number" name="NO_EMPLEADO" id="NO_EMPLEADO" placeholder="Ingrese el número de empleado" required />
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3">Introducir</button>
+    </div>
+</form>
+
+  </div>
+  </div>
 
 
-<from asp-controller="CapturaKPIs">
-    <div class="mb-3">
-        <label for="KPI 1">KPI 1 </label>
+
+
+
+
+
+@*
+<h1 class="container text-center align-center">CAPTURA DE KPIs</h1>
+<h5 class="container text-center align-center">Capture su número de empleado</h5>
+
+<form class="row g-3 align-content-center">
+  <div class="col-auto text-center">
+    <label for="Numero de empleado" class="visually-hidden">Número de empleado</label>
+    <input type="text" readonly class="form-control-plaintext" id="Numero de empleado" value="Número de empleado">
+  </div>
+  <div class="col-auto text-center">
+    <label for="Numero de empleado" class="visually-hidden">No empleado</label>
+    <input type="text" class="form-control" id="NoEmpleado" placeholder="NoEmpleado">
+  </div>
+  <div class="col-auto text-center">
+    <button type="submit" class="btn btn-primary mb-3">Introducir</button>
+  </div>
+</form>
+*@
+
+
+
+
+
+@*<label for="KPI 1">KPI 1 </label>
+         <p>Nombre: @ViewBag.NombreEmpleado</p>
+        <p>Apellido: @ViewBag.ApellidoEmpleado</p>
+        <p>Departamento: @ViewBag.Departamento</p>
+
         <input type="number" id="KPI 1" class="form-control" />
 
         <label for="KPI 2">KPI 2 </label>
@@ -23,14 +68,7 @@
 
         <label for="KPI 3">KPI 3 </label>
         <input type="number" id="KPI 3" class="form-control" />
-
-
-        <button>ingresar</button>
-
-    </div>
-</from>
-
-
+*@
 
 
 
